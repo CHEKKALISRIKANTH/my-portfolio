@@ -1,0 +1,285 @@
+/* ====== BASIC RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d1117;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* ====== HEADER ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #161b22;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  color: #00bcd4;
+  font-size: 24px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* ====== HOME PAGE ====== */
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0d1117;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.home-content h2 {
+  font-size: 42px;
+}
+
+.home-content h2 span {
+  color: #00bcd4;
+}
+
+.home-content h3 {
+  font-size: 22px;
+  color: #ccc;
+  margin: 10px 0;
+}
+
+.home-content p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00bcd4;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #008c9e;
+}
+
+/* ====== SECTIONS ====== */
+section {
+  padding: 60px 100px;
+}
+
+#about h2,
+#projects h2,
+#contact h2 {
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 800px;
+  color: #ccc;
+}
+
+.skillslist {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit,margin(220px,1fr));
+  gap: 18px;
+  margin-top: 18px;
+  
+}
+.skillssection {
+  background: #fff; 
+  padding: 16px;
+  border-radius: 8px ;
+  box-shadow: 0 6px 18px rgba(12,34,56,0.06);
+}
+
+/* ====== PROJECTS ====== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project {
+  background: #161b22;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  background: #1f2937;
+}
+
+.project h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* ====== CONTACT ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #008c9e;
+}
+
+/* ====== BACK BUTTON ====== */
+.back-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: #1f2937;
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #161b22;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .home-content h2 {
+    font-size: 32px;
+  }
+}
+.srianthimage {
+  height: 270px;
+  width: 270px;
+  flex-direction: row;
+  margin-left: 70px;
+  border-radius: 500px;
+  padding: 20px;
+}
+.page { padding: 44px 0; background: none; }
+.about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 24px; align-items: center; }
+.about-text h2 { margin-bottom: 10px; }
+.about-text p { color: #334155; margin-bottom: 12px; }
+.about-text ul { margin-top: 8px; color: #334155; }
+.icon {
+  height: 80px;
+  width: 80px;
+}
+/* Social icons container */
+.social-icons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Each icon link */
+.social-icons a {
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* Icon styles */
+.social-icons i {
+  font-size: 30px;
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for each platform */
+.social-icons a:hover i.bi-linkedin {
+  color: #0a66c2;
+  transform: scale(1.2);
+}
+
+.social-icons a:hover i.bi-twitter {
+  color: #1da1f2;
+  transform: scale(1.2);
+}
+
+.social-icons a:hover i.bi-instagram {
+  color: red;
+  transform: scale(1.2);
+}
+.social-icons a:hover i.bi-github {
+  color: #f7f2f2;
+  transform: scale(1.2);
+} 
